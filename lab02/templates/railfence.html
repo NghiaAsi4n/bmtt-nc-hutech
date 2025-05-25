@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Rail Fence Cipher Demo</title>
+    <style>
+        body { background: #f4f8fb; font-family: 'Segoe UI', Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+        h2 { color: #007bff; margin-bottom: 20px; margin-top:40px;}
+        .form-container { background: #fff; border-radius: 14px; box-shadow: 0 6px 32px rgba(0,0,0,0.10); padding: 32px 28px; width: 100%; max-width: 400px; margin-bottom: 30px; }
+        form { display: flex; flex-direction: column; gap: 13px; }
+        label { font-weight: 500; color: #222; margin-bottom: 3px; }
+        input[type="text"], input[type="number"] { padding: 9px 11px; border: 1px solid #bcd4e6; border-radius: 6px; font-size: 1rem; }
+        input[type="submit"] { background: #007bff; color: #fff; padding: 10px 0; border: none; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 7px; transition: background 0.2s; }
+        input[type="submit"]:hover { background: #0056b3; }
+        .note { color: #555; font-size: 0.95rem; margin-bottom: 22px; text-align: center; }
+        .result-box { background: #eaf6ff; border-radius: 7px; padding: 12px 15px; margin-top: 10px; margin-bottom: 2px; font-size: 1.1rem; color: #0c60b7; word-break:break-all;}
+    </style>
+</head>
+<body>
+    <h2>Rail Fence Cipher Test</h2>
+    <div class="form-container">
+        <form method="post">
+            <label for="plain_text">Plain text:</label>
+            <input name="plain_text" id="plain_text" type="text" required>
+            <label for="key_encrypt">Số đường ray (key):</label>
+            <input name="key_encrypt" id="key_encrypt" type="number" min="2" required>
+            <input type="submit" name="encrypt" value="Encrypt">
+        </form>
+        {% if encrypt_result %}
+        <div class="result-box">
+            <b>Encrypted:</b> {{ encrypt_result }}
+        </div>
+        {% endif %}
+    </div>
+    <div class="form-container">
+        <form method="post">
+            <label for="cipher_text">Cipher text:</label>
+            <input name="cipher_text" id="cipher_text" type="text" required>
+            <label for="key_decrypt">Số đường ray (key):</label>
+            <input name="key_decrypt" id="key_decrypt" type="number" min="2" required>
+            <input type="submit" name="decrypt" value="Decrypt">
+        </form>
+        {% if decrypt_result %}
+        <div class="result-box">
+            <b>Decrypted:</b> {{ decrypt_result }}
+        </div>
+        {% endif %}
+    </div>
+    <div class="note">
+        Số đường ray phải lớn hơn 1. Demo Rail Fence Cipher bởi Flask.
+    </div>
+</body>
+</html>

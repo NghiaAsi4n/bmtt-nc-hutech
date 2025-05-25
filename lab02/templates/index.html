@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>BMTT-NC-HUTECH</title>
+    <style>
+        body {
+            background: #f8fbfd;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 540px;
+            margin: 70px auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 6px 28px rgba(0,0,0,0.12);
+            padding: 40px 32px 32px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #007bff;
+            font-size: 35px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        .desc {
+            font-size: 17.28px;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .crypto-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .crypto-item {
+            padding: 16px 22px;
+            background: #f2f6ff;
+            border-radius: 11px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: box-shadow 0.2s;
+        }
+        .crypto-item:hover {
+            box-shadow: 0 4px 18px rgba(0, 123, 255, 0.10);
+            background: #eaf2fe;
+        }
+        .crypto-title {
+            font-size: 18.56px;
+            color: #1366d6;
+            font-weight: 600;
+        }
+        .crypto-link {
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            border-radius: 6px;
+            padding: 7px 18px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background 0.18s;
+        }
+        .crypto-link:hover {
+            background: #0056b3;
+        }
+        @media (max-width: 650px) {
+            .container { max-width: 97vw; padding: 20px 6vw;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bảo mật thông tin nâng cao</h1>
+        <div class="desc">
+            Hệ thống demo các thuật toán mã hóa cổ điển và hiện đại.<br>
+        </div>
+        <div class="crypto-list">
+            <div class="crypto-item">
+                <div class="crypto-title">Mã hóa Caesar</div>
+                <a class="crypto-link" href="/caesar">Truy cập</a>
+            </div>
+            <div class="crypto-item">
+                <div class="crypto-title">Mã hóa Vigenere</div>
+                <a class="crypto-link" href="/vigenere">Truy cập</a>
+            </div>
+            <div class="crypto-item">
+                <div class="crypto-title">Mã hóa Rail Fence</div>
+                <a class="crypto-link" href="/railfence">Truy cập</a>
+            </div>
+            <div class="crypto-item">
+                <div class="crypto-title">Mã hóa Playfair</div>
+                <a class="crypto-link" href="/playfair">Truy cập</a>
+            </div>
+            <div class="crypto-item">
+                <div class="crypto-title">Mã hóa Transposition</div>
+                <a class="crypto-link" href="/transposition">Truy cập</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
